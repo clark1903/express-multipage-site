@@ -19,6 +19,16 @@ app.get("/about", (req, res) => {
 app.get("/contact", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "contact.html"));
 });
+// blog page
+app.get("/blog", (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "blog.html"));
+});
+
+// API route that sends JSON
+app.get("/api/posts", (req, res) => {
+  res.sendFile(path.join(__dirname, "data", "posts.json"));
+});
+
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
